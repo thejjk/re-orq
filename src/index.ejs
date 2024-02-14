@@ -19,8 +19,15 @@
     Learn more about CSP policies at https://content-security-policy.com/#directive
   -->
 
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:* cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.worker.min.js; connect-src https: localhost:* ws://localhost:* wss://global.vss.twilio.com wss://ws-nav-bff-hml.dasa.com.br/graphql wss://ws-nav-bff.dasa.com.br/graphql wss://ws.hotjar.com/api/v2/client/ws blob:; style-src 'unsafe-inline' https:; worker-src blob:; object-src 'none'; font-src 'self' data: https:; img-src 'self' data: https: localhost:*; frame-src 'self' blob: www.google.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; 
+    script-src 'unsafe-inline' 'unsafe-eval' https: localhost:* react-app*; 
+    connect-src https: localhost:* ws://localhost:* blob:; 
+    style-src 'unsafe-inline' https:; 
+    worker-src blob:; 
+    object-src 'none'; 
+    font-src 'self' data: https:; 
+    img-src 'self' data: https: localhost:*; 
+    frame-src 'self' blob: www.google.com;" />
 
 
 
