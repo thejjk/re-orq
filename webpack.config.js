@@ -30,7 +30,8 @@ module.exports = (webpackConfigEnv, argv) => {
         templateParameters: {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
-          environment: { ...environment, HOMEs: environment.HOMEs }
+          environment: { ...environment, HOMEs: environment.HOMEs },
+
         },
       }),
     ],
