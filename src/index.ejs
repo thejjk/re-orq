@@ -52,11 +52,7 @@
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@rp/root-config": "/rp-root-config.js",
-        "@react-app/home": "https://<%= environment.HOMEs %>/react-app-home.js",
-        "@react-app/header": "https://<%= environment.HEADERs %>/react-app-header.js",
-        "@react-app/menu": "https://<%= environment.MENUs %>/react-app-menu.js",
-        "@react-app/dash": "https://<%= environment.DASHs %>/react-app-dash.js"
+        "<%= environment %>"
       }
     }
   </script>
@@ -73,7 +69,7 @@
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
         "@rp/root-config": "//localhost:9000/rp-root-config.js",
-        "@react-app/home": "http://<%= environment.HOMEs %>/react-app-home.js"
+        "<%= environment %>"
       }
     }
   </script>
