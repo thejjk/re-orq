@@ -20,7 +20,7 @@
   -->
 
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; 
-    script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; 
+    script-src 'unsafe-inline' 'unsafe-eval' https: localhost:* react-app*; 
     connect-src https: localhost:* ws://localhost:* blob:; 
     style-src 'unsafe-inline' https:; 
     worker-src blob:; 
@@ -48,7 +48,15 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "<%= environment %>"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@rp/root-config": "/rp-root-config.js",
+        "@react-app/home": "http://<%= environment.HOMEs %>/react-app-home.js",
+        "@react-app/header": "http://<%= environment.HEADERs %>/react-app-header.js",
+        "@react-app/menu": "http://<%= environment.MENUs %>/react-app-menu.js",
+        "@react-app/dash": "http://<%= environment.DASHs %>/react-app-dash.js"
       }
     }
   </script>
@@ -61,7 +69,14 @@
     <script type="systemjs-importmap">
     {
       "imports": {
-        "<%= environment %>"
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@rp/root-config": "//localhost:9000/rp-root-config.js",
+        "@react-app/home": "http://<%= environment.HOMEs %>/react-app-home.js",
+        "@react-app/header": "http://<%= environment.HEADERs %>/react-app-header.js",
+        "@react-app/menu": "http://<%= environment.MENUs %>/react-app-menu.js",
+        "@react-app/dash": "http://<%= environment.DASHs %>/react-app-dash.js"
       }
     }
   </script>
