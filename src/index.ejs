@@ -18,8 +18,13 @@
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
     Learn more about CSP policies at https://content-security-policy.com/#directive
   -->
+
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:* cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.worker.min.js; connect-src https: localhost:* ws://localhost:* wss://global.vss.twilio.com wss://ws-nav-bff-hml.dasa.com.br/graphql wss://ws-nav-bff.dasa.com.br/graphql wss://ws.hotjar.com/api/v2/client/ws blob:; style-src 'unsafe-inline' https:; worker-src blob:; object-src 'none'; font-src 'self' data: https:; img-src 'self' data: https: localhost:*; frame-src 'self' blob: www.google.com;" />
+
+
+
+
   <meta name="importmap-type" content="systemjs-importmap" />
   <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
   <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
@@ -40,6 +45,7 @@
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@rp/root-config": "/rp-root-config.js",
         "@react-app/header": "http://<%= environment.HEADERs %>/react-app-header.js",
         "@react-app/home": "http://<%= environment.HOMEs %>/react-app-home.js",
         "@react-app/menu": "http://<%= environment.MENUs %>/react-app-menu.js",
